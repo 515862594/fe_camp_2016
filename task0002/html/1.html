@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,html{
+            height:100%;
+            margin:0;
+        }
+        body{
+            background-image: url("img/bw-bg.png");
+            background-size: cover;
+        }
+        .img-box{
+            width: 800px;
+            height: 0;
+            margin:150px auto;
+            position: relative
+        }
+        .img-box img{
+            position:absolute;
+            width:250px;
+            height:350px;
+            top:0;
+            left:0;
+        }
+        .btn-box{
+            width: 150px;
+            height: auto;
+            float: right;
+            margin-right: 350px;
+
+        }
+        .btn-box button{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #89cbdb;
+            border-radius: 5px;
+            font-size: 28px;
+            margin: 50px;
+            outline: none;
+        }
+        .img1{
+            background-image:url("img/btn-blue.png");
+            color:dimgray;
+        }
+        .img2{
+            background-image: url("img/btn-gray.png");
+            color: mediumturquoise;
+        }
+    </style>
+</head>
+<body id="body">
+<div class="img-box">
+    <img id="img"src="img/bw.png">
+</div>
+<div class="btn-box">
+    <button id="xx"class="img1">小新</button>
+    <br>
+    <button id="bw"class="img2">巴卫</button>
+</div>
+<script>
+    var btn1=document.getElementById("xx");
+    var btn2=document.getElementById("bw");
+    btn1.onclick=function(){
+        img.setAttribute("src","img/xx.png");
+        document.getElementById("body").style.backgroundImage="url('img/xx-bg.png')";
+        if(this.className == 'img1'){
+            this.className = 'img2';
+            btn2.className = 'img1'
+        }
+    };
+    btn2.onclick=function(){
+        img.setAttribute("src","img/BW.png");
+        document.getElementById("body").style.backgroundImage="url('img/bw-bg.png')";
+        if(this.className == 'img1'){
+            this.className = 'img2';
+            btn1.className = 'img1'
+        }
+    }
+</script>
+</body>
+</html>
